@@ -1,56 +1,80 @@
 //forEach
 
-//array de valores
-const arrayForEach = [1, 2, 3, 4, 5];
-arrayForEach.forEach(item => {
-  console.log(item);
-});
+    //array de valores
+    const arrayForEach = [1, 2, 3, 4, 5];
+    arrayForEach.forEach(item => {
+    console.log(item);
+    });
 
-//array de objetos
-const students = [
-    { name: 'Juan', age: 25 },
-    { name: 'María', age: 22 },
-    { name: 'Pedro', age: 28 }
-  ];
-  
-students.forEach(student => {
-    console.log(`${student.name} tiene ${student.age} años.`);
-});
+    //array de objetos
+    const students = [
+        { name: 'Juan', age: 25 },
+        { name: 'María', age: 22 },
+        { name: 'Pedro', age: 28 }
+    ];
+    
+    students.forEach(student => {
+        console.log(`${student.name} tiene ${student.age} años.`);
+    });
 
 //for of
 
-//array de valores
-const arrayForOf = [1, 2, 3, 4, 5];
-for (const item of arrayForOf) {
-  console.log(item);
-}
+    //array de valores
+    const arrayForOf = [1, 2, 3, 4, 5];
+    for (const item of arrayForOf) {
+    console.log(item);
+    }
 
-//array de objetos
-const students = [
-    { name: 'Juan', age: 25 },
-    { name: 'María', age: 22 },
-    { name: 'Pedro', age: 28 }
-  ];
-  
-for (const student of students) {
-    console.log(`${student.name} tiene ${student.age} años.`);
-}
+    //array de objetos
+    const students = [
+        { name: 'Juan', age: 25 },
+        { name: 'María', age: 22 },
+        { name: 'Pedro', age: 28 }
+    ];
+    
+    for (const student of students) {
+        console.log(`${student.name} tiene ${student.age} años.`);
+    }
 
 //for in
-const arrayForIn = [1, 2, 3, 4, 5];
-for (const index in arrayForIn) {
-  console.log(arrayForIn[index]);
-}
+
+    //array de valores
+    const arrayForIn = [1, 2, 3, 4, 5];
+    for (const index in arrayForIn) {
+    console.log(arrayForIn[index]);
+    }
+
+    //array de objetos
+
 
 //map
-const arrayMap = [1, 2, 3, 4, 5];
-const newArrayMap = arrayMap.map(item => item * 2);
-console.log(newArrayMap)
+    //array de valores
+    const arrayMap = [1, 2, 3, 4, 5];
+    const newArrayMap = arrayMap.map(item => item * 2);
+    console.log(newArrayMap)
+    const students = [
+        { name: 'Juan', grade: 90 },
+        { name: 'María', grade: 88 },
+        { name: 'Pedro', grade: 75 }
+      ];
+      
+      const topStudents = students.map(student => console.log(student));
+
 
 //filter
-const arrayFilter = [1, 2, 3, 4, 5];
-const filteredArray = arrayFilter.filter(item => item > 2);
-console.log(filteredArray)
+    //array de valores
+    const arrayFilter = [1, 2, 3, 4, 5];
+    const filteredArray = arrayFilter.filter(item => item > 2);
+    console.log(filteredArray)
+
+    //array de objetos
+    const students = [
+        { name: 'Juan', grade: 90 },
+        { name: 'María', grade: 88 },
+        { name: 'Pedro', grade: 75 }
+    ];
+  
+    const topStudents = students.filter(student => student.grade >= 90);
 
 //find
 const arrayFind = [1, 2, 3, 4, 5];
