@@ -31,16 +31,29 @@ function App() {
 
 
 // Fetch
-/*
+
 
 //ES6
 fetch(URL)
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(({results, info}) => {
+ // .then(data => { // opcion b
+    // ES5
+    // const ejemplo = data.results;
+    // console.log(ejemplo, "ejemplo");
+
+    // ES6 destructuring
+    // const {results} = data; // opcion b
+
+    console.log(results, "results");
+    console.log(info);
+
+    // Map
+    //const getSingleData = data.results.map(item => console.log(item));
+    //console.log(getSingleData);
+  });
   
-  // Map
-// const getSingleData = data.map(item => console.log(item));
-// console.log(item[2]); // por que no reconoce item? 
+
 
 // Filter
 
@@ -49,6 +62,7 @@ fetch(URL)
 
 
 //ES5
+/*
 fetch(URL)
   .then(function(response) {
     return response.json();
@@ -86,7 +100,7 @@ fetch(URL)
     console.error(error);
   });
 
-/*
+*/
 
 /*
   fetch(`${URL}1`)
@@ -117,7 +131,7 @@ fetch(URL)
  .then((response) => {
   const data = response.data.results;
 
-  // by me:
+  //by me:
   // const getSingleData = data.map(item => console.log(item));
   // console.log(getSingleData);
 
@@ -130,6 +144,11 @@ fetch(URL)
 
         const filteredData = data.filter(item => item.name.startsWith("R"));
         console.log(filteredData);
+
+        const filteredStatus = data.filter(item => item.status == "Alive");
+        console.log(filteredStatus);
+
+
  })
  .catch((error) => console.log(error));
 */
